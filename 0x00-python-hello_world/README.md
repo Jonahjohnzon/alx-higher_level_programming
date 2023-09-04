@@ -12,3 +12,4 @@ Python Hello world
 10-check_cycle.c, lists.h : Technical interview preparation
 100-write.py : Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19
 101-compile : cript that compiles a Python script file.
+02-magic_calculation.py : Write the Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode:
