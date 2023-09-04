@@ -8,3 +8,4 @@ Python Hello world
 6-concat.py : Complete this source code to print Welcome to Holberton School!
 7-edges.py : Complete this source code
 8-concat_edges.py : Complete this source code to print object-oriented programming with Python, followed by a new line.
+9-easter_egg.py : Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
