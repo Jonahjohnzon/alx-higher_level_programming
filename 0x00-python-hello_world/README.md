@@ -7,4 +7,4 @@ Python Hello world
 5-print_string.py : Complete this source code in order to print 3 times a string stored in the variable str
 6-concat.py : Complete this source code to print Welcome to Holberton School!
 7-edges.py : Complete this source code
-
+8-concat_edges.py : Complete this source code to print object-oriented programming with Python, followed by a new line.
