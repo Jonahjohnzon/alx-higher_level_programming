@@ -1,2 +1,7 @@
 Python Hello world
 0-run : run PYFILE
+1-run_inline : Shell script that runs Python code
+2-print.py : Write a Python script
+3-print_number.py : Complete this source code
+4-print_float.py : Complete the source code in order to print the float stored in the variable number with a precision of 2 digits.
+5-print_string.py : Complete this source code in order to print 3 times a string stored in the variable str
