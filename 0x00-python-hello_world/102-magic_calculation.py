@@ -1,5 +1,3 @@
 def magic_calculation(a, b):
-    result = 98
-    result = result ** a
-    result += b
+    result = 98 + a ** b
     return result
