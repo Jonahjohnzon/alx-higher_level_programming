@@ -7,3 +7,4 @@
 6-print_comb3.py : print numbers without repeat
 7-islower.py : check lowercase
 8-uppercase.py : change uppercase
+9-print_last_digit.py : print last digit
