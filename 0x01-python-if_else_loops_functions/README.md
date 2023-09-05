@@ -9,3 +9,4 @@
 8-uppercase.py : change uppercase
 9-print_last_digit.py : print last digit
 10-add.py : function that adds two integers and returns the result
+11-pow.py : power of
