@@ -6,3 +6,4 @@
 5-print_comb2.py : program that prints numbers from 0 to 99.
 6-print_comb3.py : print numbers without repeat
 7-islower.py : check lowercase
+8-uppercase.py : change uppercase
