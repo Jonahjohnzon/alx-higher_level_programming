@@ -4,3 +4,4 @@
 3-print_alphabt.py : Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
 4-print_hexa.py : print hex
 5-print_comb2.py : program that prints numbers from 0 to 99.
+6-print_comb3.py : print numbers without repeat
