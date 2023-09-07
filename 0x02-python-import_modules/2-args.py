@@ -10,5 +10,5 @@ if (__name__ == "__main__"):
         print("1 argument:")
     else:
         print("{} arguments:".format(number))
-    for no in range(1, number + 1):
-        print("{}: {}".format(no, sys.argv[no]))
+    for no in range(number):
+        print("{}: {}".format(no + 1, sys.argv[no + 1]))
