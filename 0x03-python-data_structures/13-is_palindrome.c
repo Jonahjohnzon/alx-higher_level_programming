@@ -7,7 +7,7 @@
  */
 void reverse_list(listint_t **head)
 {
-	listint_t *p = NULL;
+	listint_t *pre = NULL;
 	listint_t *curr = *head;
 	listint_t *next = NULL;
 
@@ -54,7 +54,7 @@ int is_palindrome(listint_t **head)
 	reverse_list(&dp);
 	while (dp && tmp)
 	{
-		if (temp->n == dup->n)
+		if (tmp->n == dp->n)
 		{
 			dp = dp->next;
 			tmp = tmp->next;
