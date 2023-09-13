@@ -8,14 +8,15 @@ def subtraction(list_number):
             sub += num
     return (max_list - sub)
 
+
 def roman_to_int(roman_string):
     if not roman_string:
         return 0
     if not isinstance(roman_string, str):
         return 0
 
-    rom_number = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-    keys = list(rom_number.keys())
+    _numb = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    keys = list(_numb.keys())
 
     number = 0
     last_roman = 0
@@ -24,12 +25,12 @@ def roman_to_int(roman_string):
     for char in roman_string:
         for r_number in keys:
             if r_number == char:
-                if (rom_number.get(char) <= last_roman):
+                if (_numb.get(char) <= last_roman):
                     number += subtraction(list_number)
-                    list_number = [rom_number.get(char)]
+                    list_number = [_numb.get(char)]
                 else:
-                    list_number.append(rom_number.get(char))
-                last_roman = rom_number.get(char)
+                    list_number.append(_numb.get(char))
+                last_roman = _numb.get(char)
 
     number += subtraction(list_number)
     return (number)
