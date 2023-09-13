@@ -6,6 +6,6 @@ def best_score(a_dictionary):
         top = ""
         for key in keys:
             if (a_dictionary[key] > highest):
-                highest += a_dictionary[key]
+                highest = a_dictionary[key]
                 top = key
         return top
