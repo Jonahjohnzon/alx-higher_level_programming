@@ -33,11 +33,11 @@ void print_python_bytes(PyObject *p)
 		lim = size + 1;
 	}
 	printf("  first %ld bytes:", lim);
-	for (a = 0; a < limit; a++)
-		if (string[a] >= 0)
-			printf(" %02x", string[a]);
+	for (a = 0; a < lim; a++)
+		if (str[a] >= 0)
+			printf(" %02x", str[a]);
 		else
-			printf(" %02x", 256 + string[a]);
+			printf(" %02x", 256 + str[a]);
 	printf("\n");
 }
 
