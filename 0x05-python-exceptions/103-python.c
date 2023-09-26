@@ -24,7 +24,7 @@ void print_python_float(PyObject *p)
 }
 /**
  * print_python_bytes - function
- * @p:  PyObject
+ * @p: PyObject
  */
 
 void print_python_bytes(PyObject *p)
