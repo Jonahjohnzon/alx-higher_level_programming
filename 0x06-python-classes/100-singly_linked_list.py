@@ -1,14 +1,13 @@
 #!/usr/bin/python3
 
-"""classes"""
+"""Classes"""
 
 
 class Node:
     """Node"""
 
     def __init__(self, data, next_node=None):
-        """new Node.
-        """
+        """new Node """
         self.data = data
         self.next_node = next_node
 
@@ -18,7 +17,6 @@ class Node:
         return (self.__data)
 
     @data.setter
-    '''setter'''
     def data(self, value):
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
