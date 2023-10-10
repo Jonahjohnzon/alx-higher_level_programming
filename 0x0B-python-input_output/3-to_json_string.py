@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 """ string to JSON"""
 import json
 
