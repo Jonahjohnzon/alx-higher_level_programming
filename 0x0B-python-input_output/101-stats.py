@@ -24,7 +24,7 @@ if __name__ == "__main__":
     try:
         for li in sys.stdin:
             if (count == 10):
-                _stats(siz, status_codes)
+                p_stats(siz, status_codes)
                 count = 1
             else:
                 count += 1
