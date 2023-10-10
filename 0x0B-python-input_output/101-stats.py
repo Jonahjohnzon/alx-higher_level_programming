@@ -4,12 +4,12 @@ FUNTION
 """
 
 
-def p_stats(size, status_codes):
+def p_stats(siz, status_codes):
     """Print accumulated METRIC
     """
-    print("File size: {}".format(size))
+    print("File size: {}".format(siz))
     for x in sorted(status_codes):
-        print("{}: {}".format(key, status_codes[x]))
+        print("{}: {}".format(x, status_codes[x]))
 
 
 if __name__ == "__main__":
