@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Class rectangle"""
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -38,6 +39,34 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = value
 
+    @property
+    def x(self):
+        """getter/setter"""
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        if type(value) != int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+
+        self.__x = value
+
+    @property
+    def y(self):
+        """getter/setters"""
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        if type(value) != int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+
+        self.__y = value
+
     def area(self):
         """Area of rectangle."""
         return self.width * self.height
@@ -54,3 +83,25 @@ class Rectangle(Base):
         for i in range(self.height):
             rec += (" " * self.x) + (ps*self.width) + "\n"
         print(rec, end="")
+
+    def __str__(self):
+        """print() and str() rep of the rectangle."""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
+
+    def update(self, *args, **kwargs):
+        """ functtion"""
+        if (len(args) == 0):
+            for key, val in kwargs.items():
+                self.__setattr__(key, val)
+            return
+
+        try:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        except IndexError:
+            pass
