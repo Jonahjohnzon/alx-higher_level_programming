@@ -1,5 +1,11 @@
 #!/usr/bin/python3
 
+"""base model clas"""
+import json
+import csv
+import turtle
+
+
 class Base:
     """Class Base"""
 
@@ -38,7 +44,7 @@ class Base:
             return []
         return json.loads(json_string)
 
-        @classmethod
+    @classmethod
     def create(cls, **dictionary):
         """Return a class instant"""
         if (dictionary and dictionary != {}):
@@ -49,7 +55,7 @@ class Base:
             n.update(**dictionary)
             return n
 
-        @classmethod
+    @classmethod
     def load_from_file(cls):
         """load_from_file"""
         fil = str(cls.__name__) + ".json"
@@ -101,6 +107,7 @@ class Base:
         turt.screen.bgcolor("#b7312c")
         turt.pensize(3)
         turt.shape("turtle")
+
         turt.color("#ffffff")
         for rect in list_rectangles:
             turt.showturtle()
@@ -113,6 +120,7 @@ class Base:
                 turt.forward(rect.height)
                 turt.left(90)
             turt.hideturtle()
+
         turt.color("#b5e3d8")
         for sq in list_squares:
             turt.showturtle()
@@ -125,4 +133,5 @@ class Base:
                 turt.forward(sq.height)
                 turt.left(90)
             turt.hideturtle()
+
         turtle.exitonclick()
