@@ -32,7 +32,7 @@ class Base:
         fil = cls.__name__ + ".json"
         with open(fil, "w") as jfile:
             if (list_objs is None):
-                j.write("[]")
+                jfile.write("[]")
             else:
                 list_dicts = [o.to_dictionary() for o in list_objs]
                 jfile.write(Base.to_json_string(list_dicts))
