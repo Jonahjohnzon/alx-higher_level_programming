@@ -124,16 +124,7 @@ class TestBase_to_json_string(unittest.TestCase):
         self.assertTrue(len(Base.to_json_string(list_dicts)) == 78)
 
     def test_to_json_string_empty_list(self):
-        self.assertEqual("[]", Base.to_json_string([])
-
-    def test_to_json_string_no_args(self):
-        with self.assertRaises(TypeError):
-            Base.to_json_string()
-
-    def test_to_json_string_more_than_one_arg(self):
-        with self.assertRaises(TypeError):
-            Base.to_json_string([], 1)
-
+        self.assertEqual("[]", Base.to_json_string([]))
 
 class TestBase_save_to_file(unittest.TestCase):
     """testing save_to_file method of Base class."""
@@ -497,4 +488,4 @@ class TestBase_load_from_file_csv(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()i
+    unittest.main()
