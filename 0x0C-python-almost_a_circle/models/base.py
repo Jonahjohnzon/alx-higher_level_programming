@@ -7,7 +7,6 @@ class Base:
 
     def __init__(self, id=None):
         """initialize base"""
-        
         if (id is not None):
             self.id = id
         else:
@@ -87,10 +86,10 @@ class Base:
                     fieldnames = ["id", "width", "height", "x", "y"]
                 else:
                     fieldnames = ["id", "size", "x", "y"]
-                list_dict = csv.DictReader(csvfile, fieldnames=fieldnames)
-                list_dict = [dict([k, int(v)] for k, v in d.items())
-                              for d in list_dict]
-                return [cls.create(**d) for d in list_dict]
+                list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
+                list_dicts = [dict([k, int(v)] for k, v in d.items())
+                              for d in list_dicts]
+                return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
 
