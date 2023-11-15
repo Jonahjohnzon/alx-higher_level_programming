@@ -1,2 +1,2 @@
---show table
+-- Show table.
 SHOW TABLES;
