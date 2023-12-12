@@ -1,12 +1,12 @@
 #!/usr/bin/node
-const dic = require('./101-data').dict;
+const dict = require('./101-data').dict;
 const newd = {};
 
-Object.keys(dic).map(function (key) {
-  if (!Array.isArray(newd[dic[key]])) {
-    newd[dic[key]] = [];
+Object.keys(dict).map(function (key) {
+  if (!Array.isArray(newd[dict[key]])) {
+    newd[dict[key]] = [];
   }
-  newd[dic[key]].push(key);
+  newd[dict[key]].push(key);
 });
 
 console.log(newd);
