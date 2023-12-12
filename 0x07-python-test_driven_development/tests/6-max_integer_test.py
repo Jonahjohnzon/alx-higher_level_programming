@@ -8,17 +8,17 @@ max_integer = __import__('6-max_integer').max_integer
 class TestMaxInteger(unittest.TestCase):
     """unittests define"""
 
-    def test_order_list(self):
+    def test_ordered_list(self):
         """Test ordered list of int"""
         order = [1, 2, 3, 4]
         self.assertEqual(max_integer(order), 4)
 
-    def test_unorder_list(self):
+    def test_unordered_list(self):
         """Test unordered list of int"""
         unorder = [1, 3, 4, 2]
         self.assertEqual(max_integer(unorder), 4)
 
-    def test_max_at_start(self):
+    def test_max_at_beginning(self):
         """Test list with a start max value."""
         max_at_start = [4, 3, 2, 1]
         self.assertEqual(max_integer(max_at_start), 4)
@@ -41,7 +41,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_ints_floats(self):
         """list of ints and floats."""
         int_float = [1.73, 13.5, -3, 17, 8]
-        self.assertEqual(max_integer(intfloat), 15.5)
+        self.assertEqual(max_integer(int_float), 15.5)
 
     def test_string(self):
         """Test string"""
