@@ -1,13 +1,17 @@
 #!/usr/bin/node
+const dic = require('./101-data').dict;
 
-const dict = require('./101-data').dict;
-const newD = {};
-
-Object.keys(dict).map(function (key) {
-  if (!Array.isArray(newD[dict[key]])) {
-    newD[dict[key]] = [];
+const total = Object.entries(dic);
+const val = Object.values(dic);
+const valUniq = [...new Set(val)];
+const newDict = {};
+for (const a in valUniq) {
+  const list = [];
+  for (const z in total) {
+    if (total[z][1] === valUniq[a]) {
+      list.unshift(total[z][0]);
+    }
   }
-  newD[dict[key]].push(key);
-});
-
-console.log(newD);
+  newDict[valUniq[a]] = list;
+}
+console.log(newDict);
