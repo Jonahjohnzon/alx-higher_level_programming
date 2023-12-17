@@ -10,7 +10,7 @@ from sqlalchemy.orm import relationship
 
 if __name__ == "__main__":
     eng = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
-                         .format(sys.argv[1], sys.argv[2], sys.argv[3]))
+                        .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Base.metadata.create_all(eng)
     Session = sessionmaker(bind=eng)
     sess = Session()
