@@ -1,22 +1,10 @@
 #!/usr/bin/python3
-"""Takes in a URL,
-sends a request to the URL and displays the value of the "X-Request-Id" header.
 """
-import sys
-import urllib.request
-
-if __name__ == "__main__":
-    # Assuming a URL is always provided as a command-line argument
-    link = sys.argv[1]
-
-    try:
-        request = urllib.request.Request(link)
-        with urllib.request.urlopen(request) as response:
-            x_request_id = response.headers.get("X-Request-Id")
-
-            if x_request_id is not None:
-                print("X-Request-Id:", x_request_id)
-            else:
-                print("The 'X-Request-Id' header is not present in the response.")
-    except urllib.error.URLError as e:
-        print(f"Error: {e}")
+takes in a URL and an email address
+"""
+if __name__ == '__main__':
+    import requests
+    from sys import argv
+    payl = {'email': argv[2]}
+    r = requests.post(argv[1], data=payl)
+    print(r.text)
